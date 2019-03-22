@@ -5,7 +5,6 @@ import { ExamSchedulePageComponent } from 'src/app/pages/exam-schedule-page/exam
 import { TimetablePageComponent } from 'src/app/pages/timetable-page/timetable-page.component';
 import { TuitionfeesPageComponent } from 'src/app/pages/tuitionfees-page/tuitionfees-page.component';
 
-
 const routesConfig: Routes = [
     { path: 'home-page', component: HomePageComponent },
     { path: 'register-course-page', component: RegisterCoursePageComponent },

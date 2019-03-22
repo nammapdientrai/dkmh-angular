@@ -12,6 +12,8 @@ import { RegisterCoursePageComponent } from './pages/register-course-page/regist
 import { ExamSchedulePageComponent } from './pages/exam-schedule-page/exam-schedule-page.component';
 import { TimetablePageComponent } from './pages/timetable-page/timetable-page.component';
 import { TuitionfeesPageComponent } from './pages/tuitionfees-page/tuitionfees-page.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/modal/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TuitionfeesPageComponent } from './pages/tuitionfees-page/tuitionfees-p
     RegisterCoursePageComponent,
     ExamSchedulePageComponent,
     TimetablePageComponent,
-    TuitionfeesPageComponent
+    TuitionfeesPageComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
