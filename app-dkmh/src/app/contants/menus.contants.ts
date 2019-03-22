@@ -1,9 +1,9 @@
 export const items: string[] = [
-    "Home",
-    "Register course",
-    "View the exam schedule",
-    "See timetable",
-    "See tuition fees"
+    "Trang chủ",
+    "Đăng ký môn học",
+    "Xem điểm",
+    "Xem thời khóa biểu",
+    "Xem học phí"
 ];
 
 export const links: string[] = [
