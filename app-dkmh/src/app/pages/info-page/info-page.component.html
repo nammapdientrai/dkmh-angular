@@ -1,0 +1,85 @@
+<div id="update-information">
+  <div class="row" style="padding-top: 20px;">
+      <div class="col-sm-6">
+          <div *ngIf="changeUpdate == 0">
+              <div class="heading">
+                  <h3></h3>
+              </div>
+
+              <div class="form-group">
+                  <label for="Name"></label>
+                  <input type="text" class="form-control" disabled="true">
+              </div>
+
+              <div class="form-group">
+                  <label for="dateofbirth"></label>
+                  <input type="date" class="form-control" disabled="true">
+              </div>
+
+              <div class="row" style="margin-top: 10px">
+                  <div class="col-sm-2"> </div>
+                  <button class="col-sm-8 btn btn-outline-primary my-2 my-sm-0 waves-light waves-effect" (click)="changeCompoent(1)">
+                    Cập nhật thông tin
+                  </button>
+                  <div class="col-sm-2"></div>
+              </div>
+          </div>
+      </div>
+
+      <form class="col-sm-6">
+          <div *ngIf="changeUpdate == 1">
+              <div class="heading">
+                  <h3></h3>
+              </div>
+              <div class="form-group">
+                  <label for="Name"></label>
+                  <input type="text" class="form-control" id="name" name="name" formControlName="fullname">
+              </div>
+              <div class="form-group">
+                  <label for="dateofbirth"></label>
+                  <input type="date" class="form-control" id="dateofbirth" name="dateofbirth" formControlName="dateofbirth">
+              </div>
+
+              <div class="form-group">
+                  <label for="citizencard"></label>
+                  <input type="number" class="form-control" id="citizencard" name="citizencard" formControlName="numbercitizencard">
+                  
+              </div>
+
+              <div class="form-group">
+                  <label for="address"></label>
+                  <input type="text" class="form-control" id="address" name="address" formControlName="address">
+                  
+              </div>
+              <div class="form-group">
+                  <label for="email"></label>
+                  <input type="text" class="form-control" id="email" name="email" formControlName="email">
+                  
+              </div>
+
+              <div class="row" style="margin-top: 10px;">
+                  <div class="col-sm-4" align="center">
+                      <button class="col-sm-8 btn btn-outline-primary my-2 my-sm-0 waves-light waves-effect" type="submit" [disabled]="fromUpdate.invalid">
+                          
+                      </button>
+                  </div>
+
+                  <div class="col-sm-4" align="center">
+                      <button type="button" class="col-sm-8 btn btn-outline-primary my-2 my-sm-0 waves-light waves-effect" (click)="changeCompoent(1)">
+                         
+                      </button>
+                  </div>
+
+                  <div class="col-sm-4" align="center">
+                      <button type="button" class="col-sm-8 btn btn-outline-primary my-2 my-sm-0 waves-light waves-effect" (click)="changeCompoent(0)">
+                          
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+  <div id="sapce">
+      &nbsp; &nbsp; &nbsp;
+  </div>
+</div>

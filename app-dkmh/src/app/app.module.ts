@@ -15,6 +15,9 @@ import { TimetablePageComponent } from './pages/timetable-page/timetable-page.co
 import { TuitionfeesPageComponent } from './pages/tuitionfees-page/tuitionfees-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/modal/login/login.component';
+import { InfoPageComponent } from './pages/info-page/info-page.component';
+import { PasswordPageComponent } from './pages/password-page/password-page.component';
+import { ShowInfoComponent } from './components/show-info/show-info.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { LoginComponent } from './components/modal/login/login.component';
     TimetablePageComponent,
     TuitionfeesPageComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    InfoPageComponent,
+    PasswordPageComponent,
+    ShowInfoComponent
   ],
   imports: [
     BrowserModule,

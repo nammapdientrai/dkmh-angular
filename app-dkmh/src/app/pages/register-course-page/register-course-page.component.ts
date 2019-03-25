@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { GetDataService } from "src/app/service/get-data.service";
 import { subjects } from "src/app/model/subjects.model";
 import { Observable } from "rxjs";
+import { students } from 'src/app/model/students.model';
 
 @Component({
   selector: "app-register-course-page",
@@ -11,7 +12,8 @@ import { Observable } from "rxjs";
 export class RegisterCoursePageComponent implements OnInit {
   listSubjects: Observable<subjects>;
 
-  constructor(private getdataService: GetDataService) {}
+  constructor(private getdataService: GetDataService) {
+  }
 
   ngOnInit() {
     this.listSubjects = this.getdataService.getListSubjects();
