@@ -18,6 +18,8 @@ import { LoginComponent } from './components/modal/login/login.component';
 import { InfoPageComponent } from './pages/info-page/info-page.component';
 import { PasswordPageComponent } from './pages/password-page/password-page.component';
 import { ShowInfoComponent } from './components/show-info/show-info.component';
+import { TimetableWeekComponent } from './components/timetable-week/timetable-week.component';
+import { TimetableRowComponent } from './components/timetable-row/timetable-row.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ShowInfoComponent } from './components/show-info/show-info.component';
     LoginComponent,
     InfoPageComponent,
     PasswordPageComponent,
-    ShowInfoComponent
+    ShowInfoComponent,
+    TimetableWeekComponent,
+    TimetableRowComponent
   ],
   imports: [
     BrowserModule,

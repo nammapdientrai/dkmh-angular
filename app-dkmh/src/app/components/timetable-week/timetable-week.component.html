@@ -1,0 +1,25 @@
+<div>
+  <div>
+    <table style="vertical-align: middle; text-align: center" class="table table-hover" width="100%">
+      <thead>
+        <tr style="vertical-align: middle; text-align: center">
+          <th style="width: 5%"></th>
+          <th scope="col" *ngFor="let d of days">
+            {{d.name}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="vertical-align: middle; text-align: center" *ngFor="let stt of stts; let i = index">
+          <th scope="row" style="vertical-align: middle; text-align: center">
+            {{stt}}
+          </th>
+          <td *ngFor="let d of days" style="vertical-align: middle; text-align: center">
+              {{ getSubjectLT(stt, d.id) }}
+              {{ getSubjectTH(stt, d.id) }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

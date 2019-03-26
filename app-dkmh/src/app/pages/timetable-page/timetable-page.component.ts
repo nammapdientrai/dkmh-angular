@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timetable-page.component.css']
 })
 export class TimetablePageComponent implements OnInit {
+  state: number = 1;
 
   constructor() { }
 

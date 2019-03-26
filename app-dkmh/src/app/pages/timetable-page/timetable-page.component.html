@@ -1,3 +1,24 @@
 <div style="background-color: white">
+  <!--  OPTION : START -->
+  <div class="row" style="padding: 20px 0px 20px 0px;">
+    <div class="col-6 col-md-6" style="text-align: center;">
+      <button type="button" class="btn btn-primary">Thời khóa biểu dạng tuần</button>
+    </div>
+    <div class="col-6 col-md-6" style="text-align: center;">
+        <button type="button" class="btn">Thời khóa biểu dạng bảng</button>
+      </div>
+  </div>
+  <!-- OPTION WEEK : END -->
 
+  <!-- TIMETABLE WEEK : START -->
+  <div *ngIf="state == 1">
+    <app-timetable-week></app-timetable-week>
+  </div>
+  <!-- TIMETABLE WEEK : END -->
+
+  <!-- TIMETABLE ROW : START -->
+  <div *ngIf="state == 2">
+    <app-timetable-row></app-timetable-row>
+  </div>
+  <!-- TIMETABLE ROW : END -->
 </div>
