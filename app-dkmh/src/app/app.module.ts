@@ -20,6 +20,7 @@ import { PasswordPageComponent } from './pages/password-page/password-page.compo
 import { ShowInfoComponent } from './components/show-info/show-info.component';
 import { TimetableWeekComponent } from './components/timetable-week/timetable-week.component';
 import { TimetableRowComponent } from './components/timetable-row/timetable-row.component';
+import { TuitionfeesComponent } from './components/tuitionfees/tuitionfees.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TimetableRowComponent } from './components/timetable-row/timetable-row.
     PasswordPageComponent,
     ShowInfoComponent,
     TimetableWeekComponent,
-    TimetableRowComponent
+    TimetableRowComponent,
+    TuitionfeesComponent
   ],
   imports: [
     BrowserModule,

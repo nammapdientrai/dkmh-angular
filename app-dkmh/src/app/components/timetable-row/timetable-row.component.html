@@ -1,3 +1,54 @@
-<p>
-  timetable-row works!
-</p>
+<div style="background-color: white">
+  <!-- LIST COURSE : START -->
+  <div>
+    <table style="vertical-align: middle; text-align: center"
+      class="table table-hover table-wrapper-scroll-y my-custom-scrollbar">
+      <thead>
+        <tr style="vertical-align: middle; text-align: center">
+          <th scope="col">Mã môn học</th>
+          <th scope="col" style="width: 25%">Tên môn học</th>
+          <th scope="col" style="width: 5%">STC</th>
+
+          <th scope="col">Hình thức</th>
+          <th scope="col">Ngày học</th>
+          <th scope="col">Tiết bắt đầu</th>
+          <th scope="col">Phòng học</th>
+          <th scope="col">Mã giảng viên</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of (listSubjects)" style="vertical-align: middle; text-align: center">
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.ma_mh }}
+          </td>
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.ten_mh }}
+          </td>
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.stc }}
+          </td>
+
+          <td colspan="5">
+            <table style="vertical-align: middle; text-align: center" width="100%">
+              <tr>
+                <td><b>Lý thuyết</b></td>
+                <td style="width: 20%">{{ getDay(s.times.ngh_lt) }}</td>
+                <td style="width: 20%">{{ s.times.tiet_bd_lt }}</td>
+                <td style="width: 20%">{{ s.ma_ph }}</td>
+                <td style="width: 20%">{{ s.gv_lt.ma_gv }}</td>
+              </tr>
+              <tr>
+                <td><b>Thực hành</b></td>
+                <td>{{ getDay(s.times.ngh_th) }}</td>
+                <td>{{ s.times.tiet_bd_th }}</td>
+                <td>{{ s.ma_ph }}</td>
+                <td>{{ s.gv_th.ma_gv }}</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- LIST COURSE : END -->
+</div>

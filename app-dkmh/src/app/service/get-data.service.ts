@@ -1,25 +1,20 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { subjects } from '../model/subjects.model';
-import { students } from '../model/students.model';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { subjects } from "../model/subjects.model";
+import { students } from "../model/students.model";
+import { heroku, local } from '../contants/links.contnts';
 
 @Injectable({
-    providedIn: "root"
+  providedIn: "root"
 })
+export class GetDataService {
+  constructor(private http: HttpClient) {}
 
-export class GetDataService{
-    constructor(private http: HttpClient){
+  getListSubjects() {
+    return this.http.get<subjects>(heroku + "api/subjects");
+  }
 
-    }
-
-    getListSubjects(){
-        return this.http.get<subjects>("http://localhost:8888/api/subjects");
-    }
-
-    getStudentID(maso_sv: number){
-        return this.http.get<students>("http://localhost:8888/api/students/" + maso_sv);
-    }
+  getStudentID(maso_sv: number) {
+    return this.http.get<students>(heroku + "api/students/" + maso_sv);
+  }
 }
-
-
-

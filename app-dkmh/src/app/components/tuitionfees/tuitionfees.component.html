@@ -1,0 +1,50 @@
+<div style="background-color: white">
+  <!-- LIST COURSE : START -->
+  <div>
+    <table
+      style="vertical-align: middle; text-align: center"
+      class="table table-hover table-wrapper-scroll-y my-custom-scrollbar"
+    >
+      <thead>
+        <tr style="vertical-align: middle; text-align: center">
+          <th scope="col">Mã môn học</th>
+          <th scope="col" style="width: 25%">Tên môn học</th>
+          <th scope="col" style="width: 5%">STC</th>
+
+          <th scope="col">Giá tiền (1 chỉ)</th>
+          <th scope="col">Thành tiền (STC * Giá tiền)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let s of listSubjects"
+          style="vertical-align: middle; text-align: center"
+        >
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.ma_mh }}
+          </td>
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.ten_mh }}
+          </td>
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.stc }}
+          </td>
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.gia.gia_tc | number:'3.'}} VNĐ
+          </td>
+          <td style="vertical-align: middle; text-align: center">
+            {{ s.stc * s.gia.gia_tc | number:'3.' }} VNĐ
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>{{ totalSTC }}</td>
+          <td></td>
+          <td>{{ totalMoney | number:'3.'}} VNĐ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- LIST COURSE : END -->
+</div>

@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-timetable-page',
-  templateUrl: './timetable-page.component.html',
-  styleUrls: ['./timetable-page.component.css']
+  selector: "app-timetable-page",
+  templateUrl: "./timetable-page.component.html",
+  styleUrls: ["./timetable-page.component.css"]
 })
 export class TimetablePageComponent implements OnInit {
-  state: number = 1;
+  state: number = 2;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  changeTable(status: number) {
+    this.state = status;
   }
-
 }
