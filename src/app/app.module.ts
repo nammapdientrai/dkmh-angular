@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import routesConfig from 'src/routes/routes';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { RegisterCoursePageComponent } from './pages/register-course-page/register-course-page.component';
@@ -21,6 +20,7 @@ import { ShowInfoComponent } from './components/show-info/show-info.component';
 import { TimetableWeekComponent } from './components/timetable-week/timetable-week.component';
 import { TimetableRowComponent } from './components/timetable-row/timetable-row.component';
 import { TuitionfeesComponent } from './components/tuitionfees/tuitionfees.component';
+import { routesConfig } from 'src/routes/routes';
 
 @NgModule({
   declarations: [
